@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A fullstack React application: Next.js 14 Server Actions, Prisma, TailwindCSS, Stripe, MySQL.
 
-## Getting Started
+## Key Features
 
-First, run the development server:
+- [x] Auth
+- [x] Organizations / Workspaces
+- [x] Board creation
+- [x] Unsplash API for random beautiful cover images
+- [x] Activity log for entire organization
+- [x] Board rename and delete
+- [x] List creation
+- [x] List rename, delete, drag & drop reorder and copy
+- [x] Card creation
+- [x] Card description, rename, delete, drag & drop reorder and copy
+- [x] Card activity log
+- [x] Board limit for every organization
+- [x] Stripe subscription for each organization to unlock unlimited boards
+- [x] Landing page
+- [x] MySQL DB
+- [x] Prisma ORM
+- [x] shadcnUI & TailwindCSS
 
+### Pre-requisites
+Node version: 18.x.x
+
+### Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/aleksanderpalamar/taskflow.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install dependencies
+```bash
+cd taskflow
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Setup .env
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+DATABASE_URL=
 
-## Learn More
+NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+STRIPE_API_KEY=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_APP_URL=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+STRIPE_WEBHOOK_SECRET=
+```
 
-## Deploy on Vercel
+### Setup Prisma
+I used PlanetScale (MySQL database)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx prisma generate
+npx prisma push
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Run the app
+```bash
+npm run dev
+```
