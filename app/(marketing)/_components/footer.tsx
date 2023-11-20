@@ -13,10 +13,11 @@ export const Footer = () => {
             <p className=" text-neutral-400 text-center">
               All Rights Reserved © 2023 TaskFlow |{" "}
             </p>
-            <p className=" text-neutral-400 text-center">
+            <p aria-label="Developed by Palamar.dev" className=" text-neutral-400 text-center">
               Developed by{" "}
               <span>
                 <a
+                  role="link"
                   href="https://palamardev.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
