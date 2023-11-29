@@ -11,7 +11,7 @@ export const Navbar = () => {
       <div
         className="md:max-w-screen-2xl mx-auto flex
       items-center w-full justify-between"
-      >
+      >        
         <Logo />
         <div
           className="space-x-4 mb:block md:w-auto flex
