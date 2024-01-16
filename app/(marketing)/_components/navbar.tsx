@@ -9,7 +9,7 @@ export const Navbar = () => {
     shadow-sm bg-white flex items-center"
     >
       <div
-        className="md:max-w-screen-2xl mx-auto flex
+        className="max-w-6xl mx-auto flex
       items-center w-full justify-between"
       >        
         <Logo />
