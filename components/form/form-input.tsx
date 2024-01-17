@@ -1,6 +1,5 @@
 "use client";
 
-import { Form } from "@/app/(platform)/(dashboard)/organization/[organizationId]/form";
 import { forwardRef } from "react";
 import { useFormStatus } from "react-dom";
 import { Label } from "@/components/ui/label";
