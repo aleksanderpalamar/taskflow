@@ -1,14 +1,14 @@
-import { z } from 'zod'
+import { z } from "zod";
 
 export type FieldErrors<T> = {
-  [K in keyof T]?: string[]
-}
+  [K in keyof T]?: string[];
+};
 
 export type ActionState<TInput, TOutput> = {
   fieldErrors?: FieldErrors<TInput>;
   error?: string | null;
   data?: TOutput;
-}
+};
 
 export const createSafeAction = <TInput, TOutput>(
   schema: z.Schema<TInput>,
@@ -19,10 +19,11 @@ export const createSafeAction = <TInput, TOutput>(
 
     if (!validationResult.success) {
       return {
-        fieldErrors: validationResult.error.flatten().fieldErrors as FieldErrors<TInput>,        
-      }
+        fieldErrors: validationResult.error.flatten()
+          .fieldErrors as FieldErrors<TInput>,
+      };
     }
 
     return handler(validationResult.data);
-  } 
-}
+  };
+};
