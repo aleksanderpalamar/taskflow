@@ -55,8 +55,8 @@ const handler = async (data: InputType): Promise<ReturnType> => {
             price_data: {
               currency: "USD",
               product_data: {
-                name: "Taskify Pro",
-                description: "Unlimited boards for your organization"
+                name: "Taskflow Pro",
+                description: "Unlimited boards for your organization and teams",
               },
               unit_amount: 2000,
               recurring: {
@@ -75,7 +75,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     }
   } catch {
     return {
-      error: "Something went wrong!"
+      error: "Something went wrong, please try again later.",
     }
   };
 
